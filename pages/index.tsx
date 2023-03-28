@@ -20,7 +20,7 @@ export default function Dashboard() {
     fetcher,{ refreshInterval: 1000 }
   );
 
-  if (error) return <div>Failed to load data</div>
+  if (error) return (<div>Failed to load data</div>)
   if (!data) return (<Stack direction="column" justifyContent="center" alignItems="center" spacing={3}> <CircularIndeterminate/></Stack>);
 
   return (
@@ -41,7 +41,7 @@ export default function Dashboard() {
       alignItems="center"
       spacing={3}
       >
-        <Card sx={{ fontSize: 20,textAlign: 'center', fontWeight: 400,width: 400, height:200 , p:2 , m:2}}>
+        <Card sx={{ fontSize: 20,textAlign: 'center', fontWeight: 400,width: 800, height:600 , p:2 , m:2}}>
           {JSON.stringify(data)}
         </Card>
         {/* <Card sx={{ fontSize: 20,textAlign: 'center', fontWeight: 400,width: 200, height:70 , p:2 , m:2}}>
