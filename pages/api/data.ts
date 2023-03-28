@@ -16,7 +16,10 @@ export default function handler(
   }
   if (method == "POST") {
     console.log(req.body)
-    lastReceivedState = lastReceivedState +" ----///----////----"+req.body;
+    lastReceivedState =
+      JSON.stringify(lastReceivedState) +
+      " ----///----////----" +
+      JSON.stringify(req.body);
     res.send(200);
   }
 }
